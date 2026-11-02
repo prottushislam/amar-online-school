@@ -48,10 +48,12 @@ h2 { font-size: clamp(26px, 3vw, 32px); }
 .tile, .card { background: #fff; border-radius: 16px; padding: 20px; }
 .tile h3, .card h3 { font-size: 16px; margin-bottom: 8px; }
 .tile p, .card p, .muted { color: var(--muted); }
-.nums { display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; margin-top: 28px; }
-.nums div { border-top: 2px solid var(--green); padding-top: 14px; }
-.nums b { display: block; font-size: 44px; color: var(--green); line-height: 1; }
-.nums span { display: block; margin-top: 8px; font-size: 14px; color: var(--muted); }
+.figures { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 28px; border: 1px solid var(--line); border-radius: 24px; overflow: hidden; background: #fff; }
+.figures article { padding: 40px 24px; text-align: center; }
+.figures article + article { border-left: 1px solid var(--line); }
+.figures b { display: block; font-size: 64px; line-height: .95; letter-spacing: -0.04em; color: var(--green); }
+.figures i { display: block; width: 40px; height: 2px; margin: 16px auto 0; background: var(--green); }
+.figures span { display: block; margin-top: 12px; font-size: 15px; font-weight: 700; color: var(--navy); }
 .split { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; margin-top: 28px; }
 ol { list-style: none; }
 ol li { display: flex; gap: 12px; margin: 8px 0; font-size: 14px; }
@@ -78,12 +80,13 @@ footer .brand strong, footer .brand span { color: var(--wash); }
 .copy { border-top: 1px solid rgba(244,250,236,.2); padding: 16px 0 22px; font-size: 14px; opacity: .75; }
 @media (max-width: 900px) {
   nav, .write { display: none; }
-  .hero-grid, .grid4, .nums, .split, .cards, .founder-grid, .cta-row, .foot { grid-template-columns: 1fr; }
-  .grid4, .cards, .nums { grid-template-columns: 1fr 1fr; }
+  .hero-grid, .grid4, .figures, .split, .cards, .founder-grid, .cta-row, .foot { grid-template-columns: 1fr; }
+  .grid4, .cards { grid-template-columns: 1fr 1fr; }
+  .figures article + article { border-left: 0; border-top: 1px solid var(--line); }
   .cta-row { align-items: start; }
 }
 @media (max-width: 560px) {
-  .grid4, .cards, .nums { grid-template-columns: 1fr; }
+  .grid4, .cards { grid-template-columns: 1fr; }
 }
 </style>
 </head>
@@ -139,12 +142,12 @@ footer .brand strong, footer .brand span { color: var(--wash); }
   </section>
   <section id="numbers">
     <div class="wrap">
-      <h2>Since 2021, in numbers</h2>
-      <div class="nums">
-        <div><b>700+</b><span>Students in the General Knowledge Olympiad</span></div>
-        <div><b>587</b><span>Entries in the Human Rights Quiz and Essay</span></div>
-        <div><b>40</b><span>Winners recognized</span></div>
-        <div><b>30</b><span>UDHR articles shared in the daily campaign</span></div>
+      <p class="kicker">Since 2021</p>
+      <h2>The work, in numbers</h2>
+      <div class="figures">
+        <article><b>1,346</b><i></i><span>Participants</span></article>
+        <article><b>70</b><i></i><span>Winners</span></article>
+        <article><b>4</b><i></i><span>Projects</span></article>
       </div>
     </div>
   </section>
