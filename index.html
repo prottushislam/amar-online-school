@@ -46,14 +46,16 @@ h2 { font-size: clamp(26px, 3vw, 32px); }
 .quick { background: var(--wash); }
 .grid4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 24px; }
 .tile, .card { background: #fff; border-radius: 16px; padding: 20px; }
+.tile { border: 1px solid var(--line); box-shadow: 0 8px 22px rgba(17, 41, 84, .04); }
 .tile h3, .card h3 { font-size: 16px; margin-bottom: 8px; }
 .tile p, .card p, .muted { color: var(--muted); }
-.figures { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 28px; border: 1px solid var(--line); border-radius: 24px; overflow: hidden; background: #fff; }
-.figures article { padding: 40px 24px; text-align: center; }
-.figures article + article { border-left: 1px solid var(--line); }
-.figures b { display: block; font-size: 64px; line-height: .95; letter-spacing: -0.04em; color: var(--green); }
-.figures i { display: block; width: 40px; height: 2px; margin: 16px auto 0; background: var(--green); }
-.figures span { display: block; margin-top: 12px; font-size: 15px; font-weight: 700; color: var(--navy); }
+.figures { display: grid; grid-template-columns: 1.45fr 1fr 1fr; gap: 16px; margin-top: 28px; }
+.figures article { background: #fff; border: 1px solid var(--line); border-radius: 22px; padding: 28px 26px 26px; text-align: left; box-shadow: 0 12px 30px rgba(17, 41, 84, .05); }
+.figures article.lead { background: linear-gradient(165deg, #f4faec 0%, #fff 58%); }
+.figures small { display: block; font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--green); }
+.figures b { display: block; margin-top: 12px; font-size: 68px; line-height: .9; letter-spacing: -.045em; color: var(--navy); }
+.figures .lead b { font-size: 88px; color: var(--green); }
+.figures span { display: block; margin-top: 14px; font-size: 16px; font-weight: 700; color: var(--navy); }
 .split { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; margin-top: 28px; }
 ol { list-style: none; }
 ol li { display: flex; gap: 12px; margin: 8px 0; font-size: 14px; }
@@ -82,7 +84,6 @@ footer .brand strong, footer .brand span { color: var(--wash); }
   nav, .write { display: none; }
   .hero-grid, .grid4, .figures, .split, .cards, .founder-grid, .cta-row, .foot { grid-template-columns: 1fr; }
   .grid4, .cards { grid-template-columns: 1fr 1fr; }
-  .figures article + article { border-left: 0; border-top: 1px solid var(--line); }
   .cta-row { align-items: start; }
 }
 @media (max-width: 560px) {
@@ -145,9 +146,9 @@ footer .brand strong, footer .brand span { color: var(--wash); }
       <p class="kicker">Since 2021</p>
       <h2>The work, in numbers</h2>
       <div class="figures">
-        <article><b>1,346</b><i></i><span>Participants in competition</span></article>
-        <article><b>70</b><i></i><span>Winners</span></article>
-        <article><b>4</b><i></i><span>Projects</span></article>
+        <article class="lead"><small>In competition</small><b>1,346</b><span>Participants</span></article>
+        <article><small>Awarded</small><b>70</b><span>Winners</span></article>
+        <article><small>Since 2021</small><b>4</b><span>Projects</span></article>
       </div>
     </div>
   </section>
