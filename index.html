@@ -31,18 +31,21 @@ nav a:hover { color: var(--green); }
 .btn.ghost { border: 1px solid var(--green); color: var(--green); }
 .btn.light { background: var(--wash); color: var(--green); }
 .btn.line { border: 1px solid var(--wash); color: var(--wash); }
-.hero { background: var(--wash); padding: 64px 0; }
-.hero-grid { display: grid; grid-template-columns: 1.4fr 0.6fr; gap: 40px; align-items: center; }
-.kicker { font-size: 12px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--green); }
+.hero { background: linear-gradient(180deg, #f7fbf2 0%, #fff 78%); padding: 84px 0 36px; }
+.hero-grid { display: grid; grid-template-columns: 1.35fr .65fr; gap: 48px; align-items: center; }
+.kicker { font-size: 12px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--green); }
 h1, h2, h3 { color: var(--navy); font-weight: 700; }
-h1 { font-size: clamp(32px, 4vw, 48px); line-height: 1.15; margin: 12px 0 18px; }
-.lede { font-size: 18px; max-width: 38rem; }
+h1 { font-size: clamp(40px, 5.2vw, 64px); line-height: 1.05; letter-spacing: -.03em; margin: 14px 0 18px; }
+.lede { font-size: 18px; max-width: 36rem; color: var(--ink); }
 .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
-.logo-card { background: #fff; border-radius: 24px; padding: 24px; max-width: 280px; margin: 0 auto; }
+.logo-card { background: #fff; border: 1px solid var(--line); border-radius: 28px; padding: 28px 28px 22px; max-width: 320px; margin-left: auto; text-align: center; box-shadow: 0 18px 40px rgba(17, 41, 84, .07); }
+.logo-card strong { display: block; margin-top: 16px; font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--green); }
+.promise { border: 1px solid var(--line); border-top: 4px solid var(--green); border-radius: 24px; padding: 36px 36px 28px; box-shadow: 0 12px 30px rgba(17, 41, 84, .04); }
+.links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; font-weight: 700; font-size: 14px; }
+.links a { color: var(--green); text-decoration: none; background: var(--wash); border-radius: 999px; min-height: 40px; display: inline-flex; align-items: center; padding: 0 16px; }
 section { padding: 64px 0; }
 h2 { font-size: clamp(26px, 3vw, 32px); }
-.links { display: flex; flex-wrap: wrap; gap: 12px 28px; margin-top: 24px; font-weight: 700; font-size: 14px; }
-.links a { color: var(--green); }
+#about { padding-top: 12px; }
 .quick { background: var(--wash); }
 .grid4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 24px; }
 .tile, .card { background: #fff; border-radius: 16px; padding: 20px; }
@@ -92,6 +95,7 @@ footer .brand strong, footer .brand span { color: var(--wash); }
   nav, .write { display: none; }
   .hero-grid, .grid4, .figures, .work, .cards, .founder-grid, .cta-row, .foot { grid-template-columns: 1fr; }
   .grid4, .cards { grid-template-columns: 1fr 1fr; }
+  .logo-card { margin-left: auto; margin-right: auto; }
   .cta-row { align-items: start; }
 }
 @media (max-width: 560px) {
@@ -124,18 +128,20 @@ footer .brand strong, footer .brand span { color: var(--wash); }
           <a class="btn ghost" href="#initiatives">See initiatives</a>
         </div>
       </div>
-      <div class="logo-card"><img src="/logo.png" alt="Amar Online School logo: two children, a globe, and an open book"></div>
+      <div class="logo-card"><img src="/logo.png" alt="Amar Online School logo: two children, a globe, and an open book"><strong>Empowering children. Protecting rights.</strong></div>
     </div>
   </section>
   <section id="about">
     <div class="wrap">
-      <h2>Every child deserves a safe and informed childhood.</h2>
-      <p class="lede" style="margin-top:14px">Founded in 2021, AOS protects and promotes children’s rights through justice, awareness, and empowerment, so more children can grow up knowing their rights and able to use them.</p>
-      <div class="links">
-        <a href="#work">What we work toward</a>
-        <a href="#founder">Meet the founder</a>
-        <a href="https://www.linkedin.com/company/amar-online-school-aos" target="_blank" rel="noopener">LinkedIn page</a>
-      </div>
+      <article class="promise">
+        <h2>Every child deserves a safe and informed childhood.</h2>
+        <p class="lede" style="margin-top:14px">Founded in 2021, AOS protects and promotes children’s rights through justice, awareness, and empowerment, so more children can grow up knowing their rights and able to use them.</p>
+        <div class="links">
+          <a href="#work">What we work toward</a>
+          <a href="#founder">Meet the founder</a>
+          <a href="https://www.linkedin.com/company/amar-online-school-aos" target="_blank" rel="noopener">LinkedIn page</a>
+        </div>
+      </article>
     </div>
   </section>
   <section class="quick">
