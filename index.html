@@ -56,7 +56,15 @@ h2 { font-size: clamp(26px, 3vw, 32px); }
 .figures b { display: block; margin-top: 12px; font-size: 68px; line-height: .9; letter-spacing: -.045em; color: var(--navy); }
 .figures .lead b { font-size: 88px; color: var(--green); }
 .figures span { display: block; margin-top: 14px; font-size: 16px; font-weight: 700; color: var(--navy); }
-.split { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; margin-top: 28px; }
+.work { display: grid; grid-template-columns: .9fr 1.1fr; gap: 16px; margin-top: 28px; align-items: stretch; }
+.stand, .aims { background: #fff; border: 1px solid var(--line); border-radius: 22px; box-shadow: 0 12px 30px rgba(17, 41, 84, .05); }
+.stand { padding: 32px 28px; background: linear-gradient(165deg, #fff 0%, #f4faec 100%); }
+.stand h3 { font-size: 28px; line-height: 1.2; }
+.stand p { margin-top: 14px; }
+.aims { list-style: none; padding: 6px 8px; }
+.aims li { display: flex; gap: 14px; align-items: center; margin: 0; padding: 13px 14px; border-bottom: 1px solid var(--line); font-size: 15px; }
+.aims li:last-child { border-bottom: 0; }
+.aims b { flex: none; width: 34px; height: 34px; border-radius: 999px; background: var(--wash); color: var(--green); display: grid; place-items: center; font-size: 12px; }
 ol { list-style: none; }
 ol li { display: flex; gap: 12px; margin: 8px 0; font-size: 14px; }
 ol b { color: var(--green); }
@@ -82,7 +90,7 @@ footer .brand strong, footer .brand span { color: var(--wash); }
 .copy { border-top: 1px solid rgba(244,250,236,.2); padding: 16px 0 22px; font-size: 14px; opacity: .75; }
 @media (max-width: 900px) {
   nav, .write { display: none; }
-  .hero-grid, .grid4, .figures, .split, .cards, .founder-grid, .cta-row, .foot { grid-template-columns: 1fr; }
+  .hero-grid, .grid4, .figures, .work, .cards, .founder-grid, .cta-row, .foot { grid-template-columns: 1fr; }
   .grid4, .cards { grid-template-columns: 1fr 1fr; }
   .cta-row { align-items: start; }
 }
@@ -154,25 +162,23 @@ footer .brand strong, footer .brand span { color: var(--wash); }
   </section>
   <section id="work" class="quick">
     <div class="wrap">
+      <p class="kicker">Our work</p>
       <h2>What we do</h2>
-      <p class="lede" style="margin-top:14px">AOS advances children’s rights in Bangladesh through learning, public campaigns, and media.</p>
-      <div class="split">
-        <div>
+      <div class="work">
+        <article class="stand">
           <h3>We stand with children</h3>
-          <p class="muted" style="margin-top:10px">The daily work is rights education: UNCRC articles, the Universal Declaration of Human Rights, and plain-language conversations about marriage, labor, and the climate.</p>
-        </div>
-        <div>
-          <h3>We work toward</h3>
-          <ol>
-            <li><b>01</b><span>Promote and safeguard children’s rights.</span></li>
-            <li><b>02</b><span>Educate communities about child marriage and child labor.</span></li>
-            <li><b>03</b><span>Raise awareness of climate change and environmental responsibility.</span></li>
-            <li><b>04</b><span>Engage children in campaigns, signature drives, and pledges.</span></li>
-            <li><b>05</b><span>Bring child-related issues into the media.</span></li>
-            <li><b>06</b><span>Run quizzes, Olympiads, and essay contests.</span></li>
-            <li><b>07</b><span>Share learning and awareness content with young people.</span></li>
-          </ol>
-        </div>
+          <p>AOS advances children’s rights in Bangladesh through learning, public campaigns, and media.</p>
+          <p class="muted">The daily work is rights education: UNCRC articles, the Universal Declaration of Human Rights, and plain-language conversations about marriage, labor, and the climate.</p>
+        </article>
+        <ol class="aims">
+          <li><b>01</b><span>Promote and safeguard children’s rights.</span></li>
+          <li><b>02</b><span>Educate communities about child marriage and child labor.</span></li>
+          <li><b>03</b><span>Raise awareness of climate change and environmental responsibility.</span></li>
+          <li><b>04</b><span>Engage children in campaigns, signature drives, and pledges.</span></li>
+          <li><b>05</b><span>Bring child-related issues into the media.</span></li>
+          <li><b>06</b><span>Run quizzes, Olympiads, and essay contests.</span></li>
+          <li><b>07</b><span>Share learning and awareness content with young people.</span></li>
+        </ol>
       </div>
     </div>
   </section>
