@@ -95,15 +95,37 @@ footer .brand strong, footer .brand span { color: var(--wash); }
 .foot h4 { font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 12px; }
 .foot li { list-style: none; margin: 8px 0; font-size: 14px; }
 .copy { border-top: 1px solid rgba(244,250,236,.2); padding: 16px 0 22px; font-size: 14px; opacity: .75; }
+.menu-btn, .nav-toggle { display: none; }
 @media (max-width: 900px) {
-  nav, .write { display: none; }
+  .menu-btn { display: inline-flex; align-items: center; height: 40px; padding: 0 14px; border: 1px solid var(--line); border-radius: 999px; font-weight: 700; font-size: 14px; color: var(--navy); }
+  .brand span { display: none; }
+  nav { display: none; position: absolute; left: 0; right: 0; top: 100%; z-index: 30; flex-direction: column; gap: 0; background: #fff; border-bottom: 1px solid var(--line); padding: 6px 20px 12px; box-shadow: 0 16px 28px rgba(17, 41, 84, .08); }
+  .nav-toggle:checked ~ nav { display: flex; }
+  nav a { padding: 14px 0; border-bottom: 1px solid var(--line); }
+  .hero { padding: 40px 0 20px; }
+  .hero-grid { gap: 28px; }
+  h1 { font-size: 36px; }
+  .lede { font-size: 16px; }
+  .logo-card { max-width: 220px; padding: 18px 18px 14px; }
+  .promise { padding: 24px 20px 20px; }
+  section { padding: 44px 0; }
+  .figures b, .figures .lead b { font-size: 52px; }
+  .figures article { padding: 22px 18px; }
+  .stand { padding: 22px 18px; }
+  .stand h3 { font-size: 24px; }
   .hero-grid, .grid4, .figures, .work, .cards, .founder-grid, .cta-row, .foot { grid-template-columns: 1fr; }
   .grid4, .cards { grid-template-columns: 1fr 1fr; }
   .logo-card { margin-left: auto; margin-right: auto; }
   .cta-row { align-items: start; }
+  .actions { flex-direction: column; align-items: stretch; }
+  .actions .btn { width: 100%; }
 }
 @media (max-width: 560px) {
   .grid4, .cards { grid-template-columns: 1fr; }
+  .brand span { display: none; }
+  .wrap { width: min(1120px, calc(100% - 32px)); }
+  h1 { font-size: 32px; }
+  .logo-card { max-width: 180px; }
 }
 </style>
 </head>
@@ -111,6 +133,8 @@ footer .brand strong, footer .brand span { color: var(--wash); }
 <header>
   <div class="wrap bar">
     <a class="brand" href="#top"><img src="/logo.png" alt=""><div><strong>Amar Online School</strong><span>AOS · For every child · Since 2021</span></div></a>
+    <input id="nav-toggle" class="nav-toggle" type="checkbox" aria-label="Open menu">
+    <label class="menu-btn" for="nav-toggle">Menu</label>
     <nav>
       <a href="#about">Organisation</a>
       <a href="#work">What we do</a>
