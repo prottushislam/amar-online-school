@@ -8,248 +8,238 @@
 <link rel="icon" href="/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,650&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
-:root {
-  --navy: #0a2540;
-  --ink: #122033;
-  --muted: #5c6b7a;
-  --paper: #f6f3ec;
-  --white: #ffffff;
-  --line: #e4ddd0;
-  --accent: #1f4e79;
-}
+:root { --navy:#112954; --ink:#243028; --muted:#5c675f; --paper:#fff; --wash:#f4faec; --green:#3f6b1e; --line:#e3eadb; }
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
-body {
-  font-family: "Source Sans 3", system-ui, sans-serif;
-  color: var(--ink);
-  background: var(--paper);
-  line-height: 1.55;
-}
+body { font-family: "Open Sans", system-ui, sans-serif; color: var(--ink); background: var(--paper); line-height: 1.55; }
 img { max-width: 100%; display: block; }
 a { color: inherit; }
-.wrap { width: min(1080px, calc(100% - 40px)); margin: 0 auto; }
-header {
-  position: sticky; top: 0; z-index: 20;
-  background: rgba(246, 243, 236, 0.92);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--line);
-}
-.bar { display: flex; align-items: center; justify-content: space-between; min-height: 72px; gap: 16px; }
+.wrap { width: min(1120px, calc(100% - 40px)); margin: 0 auto; }
+header { position: sticky; top: 0; z-index: 20; background: #fff; border-bottom: 1px solid var(--line); }
+.bar { min-height: 72px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
 .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
-.brand img { width: 44px; height: 44px; object-fit: cover; border-radius: 8px; background: white; }
-.brand strong { display: block; font-size: 15px; letter-spacing: 0.01em; color: var(--navy); }
-.brand span { display: block; font-size: 12px; color: var(--muted); letter-spacing: 0.08em; text-transform: uppercase; }
-nav { display: flex; gap: 22px; }
-nav a { text-decoration: none; font-weight: 600; font-size: 15px; color: var(--navy); }
-nav a:hover { color: var(--accent); }
-.hero { padding: 72px 0 56px; }
-.hero-grid { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 48px; align-items: center; }
-.kicker { font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; font-size: 12px; color: var(--accent); margin-bottom: 14px; }
-h1, h2, h3 { font-family: Newsreader, Georgia, serif; color: var(--navy); font-weight: 650; letter-spacing: -0.02em; }
-h1 { font-size: clamp(40px, 5vw, 64px); line-height: 1.05; margin-bottom: 18px; }
-.lead { font-size: 19px; color: var(--muted); max-width: 38rem; margin-bottom: 28px; }
-.actions { display: flex; gap: 12px; flex-wrap: wrap; }
-.btn {
-  display: inline-flex; align-items: center; justify-content: center;
-  min-height: 46px; padding: 0 20px; border-radius: 999px;
-  text-decoration: none; font-weight: 700; font-size: 15px;
+.brand img { width: 44px; height: 44px; object-fit: cover; border-radius: 8px; }
+.brand strong { display: block; font-size: 14px; color: var(--navy); }
+.brand span { display: block; font-size: 12px; color: var(--muted); }
+nav { display: flex; gap: 20px; }
+nav a { text-decoration: none; font-weight: 700; font-size: 14px; color: var(--navy); }
+nav a:hover { color: var(--green); }
+.btn { display: inline-flex; align-items: center; min-height: 44px; padding: 0 18px; border-radius: 999px; text-decoration: none; font-weight: 700; font-size: 14px; }
+.btn.solid { background: var(--green); color: var(--wash); }
+.btn.ghost { border: 1px solid var(--green); color: var(--green); }
+.btn.light { background: var(--wash); color: var(--green); }
+.btn.line { border: 1px solid var(--wash); color: var(--wash); }
+.hero { background: var(--wash); padding: 64px 0; }
+.hero-grid { display: grid; grid-template-columns: 1.4fr 0.6fr; gap: 40px; align-items: center; }
+.kicker { font-size: 12px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--green); }
+h1, h2, h3 { color: var(--navy); font-weight: 700; }
+h1 { font-size: clamp(32px, 4vw, 48px); line-height: 1.15; margin: 12px 0 18px; }
+.lede { font-size: 18px; max-width: 38rem; }
+.actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+.logo-card { background: #fff; border-radius: 24px; padding: 24px; max-width: 280px; margin: 0 auto; }
+section { padding: 64px 0; }
+h2 { font-size: clamp(26px, 3vw, 32px); }
+.links { display: flex; flex-wrap: wrap; gap: 12px 28px; margin-top: 24px; font-weight: 700; font-size: 14px; }
+.links a { color: var(--green); }
+.quick { background: var(--wash); }
+.grid4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 24px; }
+.tile, .card { background: #fff; border-radius: 16px; padding: 20px; }
+.tile h3, .card h3 { font-size: 16px; margin-bottom: 8px; }
+.tile p, .card p, .muted { color: var(--muted); }
+.nums { display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; margin-top: 28px; }
+.nums div { border-top: 2px solid var(--green); padding-top: 14px; }
+.nums b { display: block; font-size: 44px; color: var(--green); line-height: 1; }
+.nums span { display: block; margin-top: 8px; font-size: 14px; color: var(--muted); }
+.split { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; margin-top: 28px; }
+ol { list-style: none; }
+ol li { display: flex; gap: 12px; margin: 8px 0; font-size: 14px; }
+ol b { color: var(--green); }
+.cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 24px; }
+.card { border: 1px solid var(--line); }
+.founder { background: var(--wash); }
+.founder-grid { display: grid; grid-template-columns: auto 1fr; gap: 28px; align-items: start; }
+.founder img { width: 96px; height: 96px; border-radius: 16px; background: #fff; object-fit: cover; }
+.role { color: var(--green); font-weight: 700; font-size: 14px; margin: 4px 0 12px; }
+.creds { margin-top: 16px; }
+.creds li { padding: 12px 0; border-top: 1px solid var(--line); }
+.note { margin-top: 14px; font-size: 14px; color: var(--muted); max-width: 46rem; }
+.cta { background: var(--green); color: var(--wash); }
+.cta h2 { color: var(--wash); }
+.cta-row { display: flex; justify-content: space-between; gap: 24px; align-items: end; }
+.cta p { margin-top: 10px; max-width: 32rem; }
+footer { background: var(--navy); color: var(--wash); }
+.foot { display: grid; grid-template-columns: 1.2fr 1fr 1fr; gap: 28px; padding: 48px 0; }
+footer a { color: var(--wash); }
+footer .brand strong, footer .brand span { color: var(--wash); }
+.foot h4 { font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 12px; }
+.foot li { list-style: none; margin: 8px 0; font-size: 14px; }
+.copy { border-top: 1px solid rgba(244,250,236,.2); padding: 16px 0 22px; font-size: 14px; opacity: .75; }
+@media (max-width: 900px) {
+  nav, .write { display: none; }
+  .hero-grid, .grid4, .nums, .split, .cards, .founder-grid, .cta-row, .foot { grid-template-columns: 1fr; }
+  .grid4, .cards, .nums { grid-template-columns: 1fr 1fr; }
+  .cta-row { align-items: start; }
 }
-.btn.solid { background: var(--navy); color: white; }
-.btn.ghost { border: 1.5px solid var(--navy); color: var(--navy); background: transparent; }
-.hero-card {
-  background: white; border: 1px solid var(--line); border-radius: 20px;
-  padding: 28px; box-shadow: 0 18px 40px rgba(10, 37, 64, 0.06);
-}
-.hero-card img { width: min(100%, 360px); margin: 0 auto 8px; }
-.stats { background: var(--navy); color: white; }
-.stats .wrap { display: grid; grid-template-columns: repeat(4, 1fr); }
-.stat { padding: 28px 16px; text-align: center; }
-.stat b { display: block; font-family: Newsreader, Georgia, serif; font-size: 36px; font-weight: 650; }
-.stat span { display: block; font-size: 14px; opacity: 0.86; margin-top: 4px; }
-section { padding: 76px 0; }
-h2 { font-size: clamp(32px, 4vw, 44px); text-align: center; margin-bottom: 36px; }
-.about { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 40px; }
-.about p { font-size: 18px; margin-bottom: 18px; }
-blockquote {
-  border-left: 3px solid var(--navy); padding-left: 16px;
-  font-family: Newsreader, Georgia, serif; font-size: 22px; line-height: 1.35; color: var(--navy);
-}
-.panel { background: white; border: 1px solid var(--line); border-radius: 16px; padding: 24px 26px; }
-.panel h3 { font-size: 22px; margin: 8px 0 12px; }
-.panel ol { padding-left: 18px; }
-.panel li { margin: 8px 0; }
-.cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-.card { background: white; border: 1px solid var(--line); border-radius: 16px; padding: 22px; }
-.card svg { width: 28px; height: 28px; stroke: var(--navy); fill: none; stroke-width: 1.7; margin-bottom: 12px; }
-.card h3 { font-size: 22px; margin-bottom: 8px; }
-.card p { color: var(--muted); }
-.founder { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 20px; }
-.role { color: var(--accent); font-weight: 700; margin: 4px 0 12px; }
-.creds { list-style: none; margin-top: 16px; }
-.creds li { padding: 10px 0; border-top: 1px solid var(--line); }
-.note { background: var(--paper); border-radius: 12px; padding: 16px; margin-top: 8px; }
-.contact { text-align: center; }
-.contact p { color: var(--muted); margin: -16px auto 22px; max-width: 36rem; }
-footer { background: var(--navy); color: white; padding: 36px 0 28px; text-align: center; }
-footer .brand { justify-content: center; color: white; margin-bottom: 10px; }
-footer .brand strong, footer .brand span { color: white; }
-footer p { opacity: 0.85; font-size: 14px; }
-footer a { color: white; }
-@media (max-width: 860px) {
-  nav { display: none; }
-  .hero-grid, .about, .founder, .cards, .stats .wrap { grid-template-columns: 1fr; }
-  .hero { padding-top: 40px; }
-  .stat { padding: 18px 12px; }
+@media (max-width: 560px) {
+  .grid4, .cards, .nums { grid-template-columns: 1fr; }
 }
 </style>
 </head>
 <body>
 <header>
   <div class="wrap bar">
-    <a class="brand" href="#top">
-      <img src="/logo.png" alt="">
-      <div><strong>Amar Online School</strong><span>AOS · Since 2021</span></div>
-    </a>
+    <a class="brand" href="#top"><img src="/logo.png" alt=""><div><strong>Amar Online School</strong><span>AOS · Bangladesh · Since 2021</span></div></a>
     <nav>
-      <a href="#about">About</a>
-      <a href="#work">Initiatives</a>
+      <a href="#about">Organisation</a>
+      <a href="#work">What we do</a>
+      <a href="#initiatives">Initiatives</a>
       <a href="#founder">Founder</a>
       <a href="#contact">Contact</a>
     </nav>
+    <a class="btn solid write" href="mailto:prottushislam17@gmail.com">Write to us</a>
   </div>
 </header>
-
 <main id="top">
   <section class="hero">
     <div class="wrap hero-grid">
       <div>
-        <p class="kicker">Non-profit · Bangladesh</p>
-        <h1>Empowering children. Protecting rights. Changing futures.</h1>
-        <p class="lead">Amar Online School-AOS works for a safer, more informed, and more equitable childhood across Bangladesh, especially for children from marginalized communities.</p>
+        <p class="kicker">Our mission</p>
+        <h1>The realisation of children’s rights across Bangladesh.</h1>
+        <p class="lede">Amar Online School-AOS is an independent non-profit founded in 2021. The aim is a safer, more informed childhood, especially for children from marginalized communities.</p>
         <div class="actions">
-          <a class="btn solid" href="#work">See our work</a>
-          <a class="btn ghost" href="#about">About the organization</a>
+          <a class="btn solid" href="#about">About the organisation</a>
+          <a class="btn ghost" href="#initiatives">See initiatives</a>
         </div>
       </div>
-      <div class="hero-card">
-        <img src="/logo.png" alt="Amar Online School logo: two children reaching toward a globe above an open book">
+      <div class="logo-card"><img src="/logo.png" alt="Amar Online School logo: two children, a globe, and an open book"></div>
+    </div>
+  </section>
+  <section id="about">
+    <div class="wrap">
+      <h2>Every child deserves a safe and informed childhood.</h2>
+      <p class="lede" style="margin-top:14px">Founded in 2021, AOS protects and promotes children’s rights through justice, awareness, and empowerment, so more children can grow up knowing their rights and able to use them.</p>
+      <div class="links">
+        <a href="#work">What we work toward</a>
+        <a href="#founder">Meet the founder</a>
+        <a href="https://www.youtube.com/@AOS111" target="_blank" rel="noopener">YouTube channel</a>
       </div>
     </div>
   </section>
-
-  <div class="stats">
+  <section class="quick">
     <div class="wrap">
-      <div class="stat"><b>700+</b><span>Students in the General Knowledge Olympiad</span></div>
-      <div class="stat"><b>587</b><span>Students in the Human Rights Quiz & Essay</span></div>
-      <div class="stat"><b>40</b><span>Competition winners awarded</span></div>
-      <div class="stat"><b>30</b><span>UDHR articles covered in campaign</span></div>
+      <h2>Quick paths</h2>
+      <div class="grid4">
+        <a class="tile" href="#initiatives" style="text-decoration:none"><h3>Children’s rights</h3><p>Promote and safeguard the rights children already have.</p></a>
+        <a class="tile" href="#initiatives" style="text-decoration:none"><h3>Quizzes and essays</h3><p>Olympiads and contests that make rights concrete.</p></a>
+        <a class="tile" href="#initiatives" style="text-decoration:none"><h3>Climate and care</h3><p>Awareness on the environment, child marriage, and child labor.</p></a>
+        <a class="tile" href="#initiatives" style="text-decoration:none"><h3>Public voice</h3><p>Campaigns, pledges, and coverage in Bengali media.</p></a>
+      </div>
     </div>
-  </div>
-
-  <section id="about">
+  </section>
+  <section id="numbers">
     <div class="wrap">
-      <h2>Justice, awareness, and empowerment</h2>
-      <div class="about">
+      <h2>Since 2021, in numbers</h2>
+      <div class="nums">
+        <div><b>700+</b><span>Students in the General Knowledge Olympiad</span></div>
+        <div><b>587</b><span>Entries in the Human Rights Quiz and Essay</span></div>
+        <div><b>40</b><span>Winners recognized</span></div>
+        <div><b>30</b><span>UDHR articles shared in the daily campaign</span></div>
+      </div>
+    </div>
+  </section>
+  <section id="work" class="quick">
+    <div class="wrap">
+      <h2>What we do</h2>
+      <p class="lede" style="margin-top:14px">AOS advances children’s rights in Bangladesh through learning, public campaigns, and media.</p>
+      <div class="split">
         <div>
-          <p>Founded in 2021, Amar Online School-AOS is a non-profit organization dedicated to protecting and promoting children’s rights across Bangladesh. The work is built on justice, awareness, and empowerment, so that more children can grow up informed about their rights and able to use them.</p>
-          <blockquote>Every child deserves a safe and informed childhood. Amar Online School-AOS helps children realize their rights, raise their voices, and shape a better future.</blockquote>
+          <h3>We stand with children</h3>
+          <p class="muted" style="margin-top:10px">The daily work is rights education: UNCRC articles, the Universal Declaration of Human Rights, and plain-language conversations about marriage, labor, and the climate.</p>
         </div>
-        <div class="panel">
-          <h3>What we work toward</h3>
+        <div>
+          <h3>We work toward</h3>
           <ol>
-            <li>Promote and safeguard children’s rights.</li>
-            <li>Educate communities about child marriage and child labor.</li>
-            <li>Raise awareness of climate change and environmental responsibility.</li>
-            <li>Engage children in campaigns, signature drives, and pledges.</li>
-            <li>Bring child-related issues into the media.</li>
-            <li>Run quizzes, Olympiads, and essay contests.</li>
-            <li>Share learning and awareness content with young people.</li>
+            <li><b>01</b><span>Promote and safeguard children’s rights.</span></li>
+            <li><b>02</b><span>Educate communities about child marriage and child labor.</span></li>
+            <li><b>03</b><span>Raise awareness of climate change and environmental responsibility.</span></li>
+            <li><b>04</b><span>Engage children in campaigns, signature drives, and pledges.</span></li>
+            <li><b>05</b><span>Bring child-related issues into the media.</span></li>
+            <li><b>06</b><span>Run quizzes, Olympiads, and essay contests.</span></li>
+            <li><b>07</b><span>Share learning and awareness content with young people.</span></li>
           </ol>
         </div>
       </div>
     </div>
   </section>
-
-  <section id="work">
+  <section id="initiatives">
     <div class="wrap">
       <h2>Key initiatives</h2>
+      <p class="muted" style="margin-top:8px">Competitions, daily lessons, and campaigns that put children’s issues in public view.</p>
       <div class="cards">
-        <article class="card">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4h9l3 3v13H6z"/><path d="M15 4v3h3M8 12h8M8 16h6"/></svg>
-          <h3>Human Rights Quiz & Essay</h3>
-          <p>With United for Human Rights, Dhaka Chapter, 587 students across Bangladesh joined a quiz and essay competition on fundamental rights. Forty winners were recognized.</p>
-        </article>
-        <article class="card">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 4h8v3a4 4 0 0 1-8 0z"/><path d="M6 8H4a6 6 0 0 0 6 6M18 8h2a6 6 0 0 1-6 6M12 14v3M9 20h6"/></svg>
-          <h3>General Knowledge Olympiad</h3>
-          <p>More than 700 students took part, building curiosity, critical thinking, and knowledge across subjects.</p>
-        </article>
-        <article class="card">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5h14v14H5z"/><path d="M8 9h8M8 13h8M8 17h5"/></svg>
-          <h3>Daily UNCRC sharing</h3>
-          <p>The UN Convention on the Rights of the Child, shared article by article so young people can learn their rights online.</p>
-        </article>
-        <article class="card">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M4 12h16M12 4c2.5 2.4 2.5 13.6 0 16M12 4c-2.5 2.4-2.5 13.6 0 16"/></svg>
-          <h3>Awareness campaigns</h3>
-          <p>Programs on climate, environmental responsibility, and child protection, including a daily campaign through the 30 articles of the Universal Declaration of Human Rights.</p>
-        </article>
-        <article class="card">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v12H4z"/><path d="M8 10h8M8 14h5"/></svg>
-          <h3>Media advocacy</h3>
-          <p>Coverage in Bengali news has carried the organization’s work further, putting children’s issues in public view.</p>
-        </article>
-        <article class="card">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.2 4.6L19 8.2l-3.5 3.4.8 4.9L12 14.8 7.7 16.5l.8-4.9L5 8.2l4.8-.6z"/></svg>
-          <h3>UNICEF recognition</h3>
-          <p>In the 18th UNICEF Meena Media Awards 2023, the founder’s submission was named one of the top five in Text – Below 18, from more than 1,000 entries.</p>
-        </article>
+        <article class="card"><h3>Human Rights Quiz & Essay</h3><p>With United for Human Rights, Dhaka Chapter, 587 students across Bangladesh joined a quiz and essay competition on fundamental rights. Forty winners were recognized.</p></article>
+        <article class="card"><h3>General Knowledge Olympiad</h3><p>More than 700 students took part, building curiosity, critical thinking, and knowledge across subjects.</p></article>
+        <article class="card"><h3>Daily UNCRC sharing</h3><p>The UN Convention on the Rights of the Child, shared article by article so young people can learn their rights online.</p></article>
+        <article class="card"><h3>Awareness campaigns</h3><p>Programs on climate, environmental responsibility, and child protection, including a daily campaign through the 30 articles of the Universal Declaration of Human Rights.</p></article>
+        <article class="card"><h3>Media advocacy</h3><p>Coverage in Bengali news has carried the organization’s work further, putting children’s issues in public view.</p></article>
+        <article class="card"><h3>UNICEF recognition</h3><p>In the 18th UNICEF Meena Media Awards 2023, the founder’s submission was named one of the top five in Text – Below 18, from more than 1,000 entries.</p></article>
       </div>
     </div>
   </section>
-
-  <section id="founder">
-    <div class="wrap">
-      <h2>Founder</h2>
-      <div class="founder">
-        <div class="panel">
-          <h3>Prottush Islam</h3>
-          <p class="role">Founder and Executive Director</p>
-          <p>Prottush Islam founded Amar Online School-AOS in 2021. He began writing on social issues as a Child Journalist with UNICEF Bangladesh. His articles cover child marriage, women’s rights, juvenile crime, street children, and gaming addiction.</p>
-          <ul class="creds">
-            <li><strong>Child Journalist</strong>, UNICEF Bangladesh</li>
-            <li><strong>Nominee</strong>, UNICEF Meena Media Awards 2023 — top five, Text – Below 18</li>
-            <li><strong>Nominee</strong>, International Children’s Peace Prize, 2022</li>
-          </ul>
-        </div>
-        <div class="panel">
-          <h3>The nomination</h3>
-          <p>On 2 April 2024, UNICEF Bangladesh wrote to confirm the nomination and invited him to the award ceremony at the Pan Pacific Sonargaon Hotel, Dhaka, on 22 April 2024.</p>
-          <p class="note">The independent panel reviewed more than 1,000 entries. Sheldon Yett, Representative, UNICEF Bangladesh, signed the notification.</p>
-        </div>
+  <section id="founder" class="founder">
+    <div class="wrap founder-grid">
+      <img src="/logo.png" alt="">
+      <div>
+        <p class="kicker">Founder</p>
+        <h2 style="margin-top:8px">Prottush Islam</h2>
+        <p class="role">Founder and Executive Director</p>
+        <p>Prottush Islam founded Amar Online School-AOS in 2021. He began writing on social issues as a Child Journalist with UNICEF Bangladesh. His articles cover child marriage, women’s rights, juvenile crime, street children, and gaming addiction.</p>
+        <ul class="creds">
+          <li><strong>Child Journalist</strong>, UNICEF Bangladesh</li>
+          <li><strong>Nominee</strong>, UNICEF Meena Media Awards 2023 — top five, Text – Below 18</li>
+          <li><strong>Nominee</strong>, International Children’s Peace Prize, 2022</li>
+        </ul>
+        <p class="note">On 2 April 2024, UNICEF Bangladesh confirmed the Meena Media Awards nomination and invited him to the ceremony at the Pan Pacific Sonargaon Hotel, Dhaka, on 22 April 2024. An independent panel reviewed more than 1,000 entries. Sheldon Yett, Representative, UNICEF Bangladesh, signed the notification.</p>
       </div>
     </div>
   </section>
-
-  <section id="contact" class="contact">
-    <div class="wrap">
-      <h2>Follow the work</h2>
-      <p>Campaign updates, competition announcements, and awareness content live on the Amar Online School channel.</p>
-      <div class="actions" style="justify-content:center">
-        <a class="btn solid" href="https://www.youtube.com/@AOS111" target="_blank" rel="noopener">YouTube</a>
-        <a class="btn ghost" href="mailto:prottushislam17@gmail.com">Email the founder</a>
+  <section id="contact" class="cta">
+    <div class="wrap cta-row">
+      <div>
+        <h2>Help children know their rights, and use them.</h2>
+        <p>Campaign updates and competition news are on the Amar Online School channel.</p>
+      </div>
+      <div class="actions">
+        <a class="btn light" href="https://www.youtube.com/@AOS111" target="_blank" rel="noopener">YouTube</a>
+        <a class="btn line" href="mailto:prottushislam17@gmail.com">Email the founder</a>
       </div>
     </div>
   </section>
 </main>
-
 <footer>
-  <div class="wrap">
-    <div class="brand"><img src="/logo.png" alt=""><div><strong>Amar Online School-AOS</strong><span>Children’s rights · Bangladesh</span></div></div>
-    <p>© 2026 Amar Online School-AOS. A non-profit working to protect and promote children’s rights.</p>
+  <div class="wrap foot">
+    <div>
+      <div class="brand"><img src="/logo.png" alt=""><div><strong>Amar Online School-AOS</strong><span>Children’s rights · Bangladesh</span></div></div>
+      <p style="margin-top:12px;font-size:14px;opacity:.85">A non-profit working to protect and promote children’s rights in Bangladesh.</p>
+    </div>
+    <div>
+      <h4>On this site</h4>
+      <ul>
+        <li><a href="#about">Organisation</a></li>
+        <li><a href="#work">What we do</a></li>
+        <li><a href="#initiatives">Initiatives</a></li>
+        <li><a href="#founder">Founder</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <p><a href="mailto:prottushislam17@gmail.com">prottushislam17@gmail.com</a></p>
+      <p style="margin-top:8px"><a href="https://www.youtube.com/@AOS111">youtube.com/@AOS111</a></p>
+    </div>
   </div>
+  <div class="wrap copy">© 2026 Amar Online School-AOS</div>
 </footer>
 </body>
 </html>
